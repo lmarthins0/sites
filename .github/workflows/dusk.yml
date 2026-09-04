@@ -28,7 +28,7 @@ jobs:
           echo "GID=$(id -g)" >> $GITHUB_ENV
 
       - name: Build and start containers
-        run: docker compose up -d --build
+        run: docker compose up -d --build --wait
 
       - name: Wait for MariaDB
         run: |
