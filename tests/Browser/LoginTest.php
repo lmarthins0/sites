@@ -19,7 +19,7 @@ class LoginTest extends DuskTestCase
                 ->waitFor('#loginUsuario') # Importante: Espera a página de login carregar
                 ->typeSlowly('loginUsuario', '1111')
                 ->press('Login')
-                ->waitFor('.login_logout_link');
+                ->waitForText('Sair');
         });
     }
 }
